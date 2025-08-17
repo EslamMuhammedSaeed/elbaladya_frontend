@@ -13,7 +13,14 @@ i18n
       en: { translation: en },
       ar: { translation: ar },
     },
+    lng: "ar", // Set default language to Arabic
     fallbackLng: "ar",
+    detection: {
+      order: ["localStorage", "navigator", "htmlTag"],
+      caches: ["localStorage"],
+      lookupLocalStorage: "i18nextLng",
+      lookupSessionStorage: "i18nextLng",
+    },
     interpolation: {
       escapeValue: false,
     },
