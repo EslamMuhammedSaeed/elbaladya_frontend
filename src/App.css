@@ -1,0 +1,37 @@
+.app-root.ltr {
+  direction: ltr;
+}
+
+.app-root.rtl {
+  direction: rtl;
+}
+/* body {
+  overflow: scroll;
+}
+body.dark::-webkit-scrollbar-thumb {
+  background-color: red;
+}
+
+body.dark::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.05);
+} */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ccc;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

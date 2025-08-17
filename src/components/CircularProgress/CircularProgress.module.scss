@@ -1,0 +1,44 @@
+.circularProgress {
+  position: relative;
+  display: inline-block;
+}
+
+.svg {
+  transform: rotate(-90deg);
+}
+
+.background {
+  fill: none;
+  stroke: #e5e7eb;
+  stroke-linecap: round;
+}
+
+.progress {
+  fill: none;
+  stroke: #50d766;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.3s ease;
+}
+
+.value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 8px;
+  font-weight: 600;
+  color: #374151;
+  text-align: center;
+  line-height: 1;
+}
+
+// Dark mode support
+:global(.dark) {
+  .background {
+    stroke: #374151;
+  }
+
+  .value {
+    color: #f9fafb;
+  }
+}

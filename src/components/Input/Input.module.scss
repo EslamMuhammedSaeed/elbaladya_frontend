@@ -1,0 +1,60 @@
+/* src/styles/Input.scss */
+@use "@styles/themes.scss";
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+.inputLabel {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.inputField {
+  padding: 10px;
+  font-size: 18px;
+  padding-left: 40px; // 🛡 Prevent text from overlapping the icon
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  background-color: transparent;
+  color: var(--text-color);
+  width: 100%;
+  height: 56px;
+  &:focus {
+    outline: none;
+    border-color: var(--success-color);
+  }
+}
+
+.inputError {
+  border-color: red;
+}
+
+.errorMessage {
+  font-size: 12px;
+  color: red;
+  margin-top: 5px;
+}
+.inputWrapper {
+  position: relative;
+  width: 100%;
+}
+.eyeIcon {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 20px;
+  color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    color: var(--success-color);
+  }
+}

@@ -1,0 +1,411 @@
+.dashboardContainer {
+  // background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.statCard {
+  background: var(--bg-color);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.statIcon {
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.statContent {
+  flex: 1;
+}
+
+.statTitle {
+  text-align: start;
+  font-size: 0.9rem;
+  color: var(--text-dark-2);
+  margin: 0 0 8px 0;
+  font-weight: 500;
+}
+
+.statValue {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-dark-1);
+}
+
+.percentage {
+  font-size: 0.9rem;
+  color: #4caf50;
+  font-weight: 600;
+}
+
+// .mainContent {
+//   display: grid;
+//   grid-template-columns: 1fr;
+//   gap: 24px;
+
+//   @media (max-width: 1200px) {
+//     grid-template-columns: 1fr;
+//   }
+// }
+
+.profileCard {
+  background: var(--bg-color);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+}
+
+.profileHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.profileName {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark-1);
+  margin: 0;
+}
+
+.editButton {
+  background: none;
+  border: none;
+  color: var(--text-dark-2);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: #f5f5f5;
+  }
+}
+
+.profileDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.profileItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profileIcon {
+  width: 40px;
+  height: 40px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-dark-2);
+  font-size: 1.1rem;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.profileLabel {
+  text-align: start;
+  font-size: 0.8rem;
+  color: var(--text-dark-2);
+  font-weight: 500;
+}
+
+.profileValue {
+  text-align: start;
+  font-size: 1rem;
+  color: var(--text-dark-1);
+  font-weight: 600;
+}
+
+.bottomSection {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.experimentsSection {
+  background: var(--bg-color);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.sectionTitle {
+  text-align: start;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-dark-1);
+  margin: 0 0 20px 0;
+}
+
+.experimentsTable {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tableHeader {
+  display: grid;
+  grid-template-columns: 4fr 2fr 2fr 2fr 1fr;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  font-weight: 600;
+  color: var(--text-dark-2);
+  font-size: 0.9rem;
+}
+
+.sortableHeader {
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+
+.tableRow {
+  display: grid;
+  grid-template-columns: 4fr 2fr 2fr 2fr 1fr;
+  gap: 16px;
+  padding: 12px 0;
+  align-items: center;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.experimentName {
+  text-align: start;
+  font-weight: 500;
+  color: var(--text-dark-1);
+}
+
+.experimentTimes {
+  font-weight: 600;
+  color: var(--text-dark-2);
+  // text-align: start;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+}
+
+.percentageBar {
+  position: relative;
+  height: 20px;
+  background: #f5f5f5;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.percentageText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--bg-color);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.chartsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.pieChartSection {
+  background: var(--bg-color);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pieChartContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.pieChart {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #f44336 0deg 16deg,
+    #ff9800 16deg 92deg,
+    #2196f3 92deg 212deg,
+    #4caf50 212deg 360deg
+  );
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pieCenter {
+  width: 60px;
+  height: 60px;
+  background: var(--bg-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pieTotal {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-dark-1);
+}
+
+.pieLegend {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legendColor {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.legendLabel {
+  font-size: 0.9rem;
+  color: var(--text-dark-2);
+  font-weight: 500;
+}
+
+.timeSection {
+  background: var(--bg-color);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeDisplay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.timeUnit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.timeValue {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-dark-1);
+  background: #f5f5f5;
+  padding: 8px 12px;
+  border-radius: 8px;
+  min-width: 60px;
+  text-align: center;
+}
+
+.timeLabel {
+  font-size: 0.8rem;
+  color: var(--text-dark-2);
+  font-weight: 500;
+}
+
+.timeSeparator {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-dark-1);
+  margin-top: -8px;
+}

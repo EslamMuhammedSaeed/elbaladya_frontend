@@ -1,0 +1,229 @@
+.searchContainer {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  @media (max-width: 768px) {
+    padding: 0 8px;
+  }
+}
+
+.searchInput {
+  display: flex;
+  align-items: center;
+  background: var(--input-bg, #f5f5f5);
+  border: 1px solid var(--input-border, #ddd);
+  border-radius: 8px;
+  padding: 8px 12px;
+  transition: all 0.2s ease;
+
+  &:focus-within {
+    border-color: var(--success-color, #007bff);
+    // box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+  }
+
+  input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 14px;
+    color: var(--text-color, #333);
+
+    &::placeholder {
+      color: var(--text-muted, #999);
+    }
+  }
+
+  button {
+    background: none;
+    border: none;
+    color: var(--text-muted, #999);
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--success-color, #007bff);
+    }
+  }
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--bg-color, #fff);
+  border: 1px solid var(--border-color, #ddd);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin-top: 4px;
+  max-height: 400px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.resultsHeader {
+  padding: 12px 16px;
+  font-size: 0.8rem;
+  border-bottom: 1px solid var(--border-color, #ddd);
+  font-weight: 600;
+  color: var(--text-color, #333);
+  background: var(--bg-muted, #f8f9fa);
+  border-radius: 8px 8px 0 0;
+}
+
+.resultsList {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.resultItem {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  cursor: pointer;
+  gap: 10px;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid var(--border-light, #f0f0f0);
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover {
+    background: var(--hover-bg, #f8f9fa);
+  }
+
+  &:active {
+    background: var(--active-bg, #e9ecef);
+  }
+}
+
+.resultIcon {
+  //   margin-right: 12px;
+  color: var(--success-color, #007bff);
+  font-size: 16px;
+  width: 20px;
+  text-align: center;
+}
+
+.resultContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.resultName {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-color, #333);
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.resultSubtitle {
+  font-size: 12px;
+  color: var(--text-muted, #666);
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.resultType {
+  font-size: 11px;
+  color: var(--text-muted, #999);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.loading,
+.error,
+.noResults {
+  padding: 20px 16px;
+  text-align: center;
+  color: var(--text-muted, #666);
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--border-color, #ddd);
+  border-top: 2px solid var(--success-color, #007bff);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.error {
+  color: var(--danger-color, #dc3545);
+}
+
+// Dark mode support
+:global([data-theme="dark"]) {
+  .searchInput {
+    background: var(--input-bg-dark, #2d3748);
+    border-color: var(--input-border-dark, #4a5568);
+
+    input {
+      color: var(--text-color-dark, #e2e8f0);
+
+      &::placeholder {
+        color: var(--text-muted-dark, #a0aec0);
+      }
+    }
+  }
+
+  .dropdown {
+    background: var(--bg-color-dark, #2d3748);
+    border-color: var(--border-color-dark, #4a5568);
+  }
+
+  .resultsHeader {
+    background: var(--bg-muted-dark, #4a5568);
+    color: var(--text-color-dark, #e2e8f0);
+    border-color: var(--border-color-dark, #4a5568);
+  }
+
+  .resultItem {
+    border-color: var(--border-light-dark, #4a5568);
+
+    &:hover {
+      background: var(--hover-bg-dark, #4a5568);
+    }
+
+    &:active {
+      background: var(--active-bg-dark, #2d3748);
+    }
+  }
+
+  .resultName {
+    color: var(--text-color-dark, #e2e8f0);
+  }
+
+  .resultSubtitle {
+    color: var(--text-muted-dark, #a0aec0);
+  }
+
+  .resultType {
+    color: var(--text-muted-dark, #718096);
+  }
+}

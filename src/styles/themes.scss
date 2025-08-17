@@ -1,0 +1,117 @@
+// @use "./variables.scss";
+
+$primary-color: #265bc1;
+$text-black: #000000;
+$text-dark-1: #333;
+$text-dark-2: #666;
+$secondary-color: #ccc;
+$font-color: rgba(107, 114, 128, 1);
+$font-color-primary: #666666;
+$font-color-secondary: #66666640;
+$success-color: #39af8b;
+$light-gray: rgba(246, 246, 246, 1);
+$danger-color: rgba(240, 82, 82, 1);
+$layout-color: white;
+$main-background: rgba(244, 246, 245, 1);
+$table-header: rgba(249, 249, 252, 1);
+$table-body: rgb(255, 255, 255);
+
+$text-color-dark: rgba(29, 31, 44, 1);
+$paginator-disabled-background: rgba(249, 249, 252, 1);
+
+$paginator-disabled-text: rgba(107, 114, 128, 1);
+$paginator-active-background: #39af8b;
+$paginator-active-text: #ffffff;
+
+$paginator-background: rgba(249, 249, 252, 1);
+$paginator-text: rgba(107, 114, 128, 1);
+$table-border: #eee;
+$filters-border: #d8d8d8;
+$input-bg: #f5f7fb;
+$search-bg: #ffffff;
+$bg-muted: #f8f9fa;
+
+$input-color: #6b7280;
+$reports-sidebar-text: rgba(195, 202, 217, 1);
+
+// :root {
+//   --bg-color: #ffffff;
+//   --text-color: #000000;
+//   --primary-color: #0d6efd; // bootstrap primary
+
+// }
+
+// .dark {
+//   --bg-color: rgba(37, 39, 48, 1);
+//   --text-color: #ffffff;
+//   --primary-color: #0d6efd;
+// }
+:root {
+  --bg-color: #ffffff;
+  --text-color: #{$font-color};
+  --primary-color: #{$primary-color};
+  --text-black: #{$text-black};
+  --text-dark-1: #{$text-dark-1};
+  --text-dark-2: #{$text-dark-2};
+  --secondary-color: #{$secondary-color};
+  --font-color-primary: #{$font-color-primary};
+  --font-color-secondary: #{$font-color-secondary};
+  --success-color: #{$success-color};
+  --light-gray: #{$light-gray};
+  --danger-color: #{$danger-color};
+  --layout-color: #{$layout-color};
+  --main-background: #{$main-background};
+  --table-header: #{$table-header};
+  --text-color-dark: #{$text-color-dark};
+  --paginator-disabled-background: #{$paginator-disabled-background};
+  --paginator-disabled-text: #{$paginator-disabled-text};
+  --paginator-active-background: #{$paginator-active-background};
+  --paginator-active-text: #{$paginator-active-text};
+  --paginator-background: #{$paginator-background};
+  --paginator-text: #{$paginator-text};
+  --table-border: #{$table-border};
+  --table-body: #{$table-body};
+  --filters-border: #{$filters-border};
+  --input-bg: #{$input-bg};
+  --input-color: #{$input-color};
+  --search-bg: #{$search-bg};
+  --bg-muted: #{$bg-muted};
+  --reports-sidebar-text: #{$reports-sidebar-text};
+}
+
+.dark {
+  --bg-color: #252730;
+  --text-color: #ffffff;
+  --secondary-color: #{$secondary-color};
+
+  --primary-color: #265bc1;
+  --text-black: #ffffff;
+  --text-dark-1: #ffffff;
+  --text-dark-2: #cccccc;
+  --font-color-primary: #cccccc;
+  --font-color-secondary: rgba(255, 255, 255, 0.25);
+  --light-gray: #{$light-gray};
+  --success-color: #39af8b;
+  --danger-color: rgba(240, 82, 82, 1);
+  --layout-color: rgba(37, 39, 48, 1);
+  --main-background: rgba(26, 28, 34, 1);
+  --table-header: rgba(37, 39, 48, 1);
+  --text-color-dark: #ffffff;
+  --paginator-disabled-background: #{$paginator-disabled-background};
+  --paginator-disabled-text: #{$paginator-disabled-text};
+  --paginator-background: #{$paginator-background};
+  --paginator-text: #{$paginator-text};
+  --table-border: #666666;
+  --table-body: rgba(37, 39, 48, 1);
+  --filters-border: #666666;
+  --input-bg: rgba(37, 39, 48, 1);
+  --search-bg: rgba(37, 39, 48, 1);
+  --paginator-disabled-background: #666666;
+  --paginator-disabled-text: #ffffff;
+  --paginator-background: #666666;
+  --paginator-text: #ffffff;
+  --paginator-active-background: #39af8b;
+  --bg-muted: #666666;
+  --input-color: #ffffff;
+  --reports-sidebar-text: #{$reports-sidebar-text};
+}

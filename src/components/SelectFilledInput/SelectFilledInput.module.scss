@@ -1,0 +1,125 @@
+.customSelect {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+
+  padding: 4px 16px;
+  &.notAnimated {
+    padding: 6px 16px 0px 16px;
+  }
+  //   border-bottom: 2px solid var(--input-border, #ccc);
+  border: 1px solid var(--input-border);
+
+  display: flex;
+  align-items: center;
+  cursor: text; // Makes sure clicking anywhere focuses the input
+  background-color: white;
+  transition: border-color 0.3s ease;
+
+  display: flex;
+  align-items: center;
+
+  &:focus-within {
+    border: 1px solid var(--primary-color); //Change border color when input is focused
+  }
+
+  select {
+    width: 100%;
+    padding: 17px 0 6px 0;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    &.notAnimated {
+      color: var(--text-dark-3);
+    }
+    &:focus {
+      outline: none;
+    }
+
+    option {
+      padding: 10px;
+    }
+
+    // Hide the placeholder text when the select input has a value or focus
+    option[value=""]:not(:checked) {
+      display: none;
+    }
+  }
+
+  .label {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+
+    pointer-events: none;
+    transition: all 0.3s ease;
+
+    &.animated {
+      transform: translateY(-50%);
+      font-size: 16px;
+      color: var(--text-muted, #888);
+    }
+    &.notAnimated {
+      transform: translateY(-50%);
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-dark-1) !important;
+      top: 14px !important; // Adjusted so it doesn't touch the top
+
+      color: var(--primary-color, #265bc1);
+      .badge {
+        background: rgba(175, 179, 255, 0.19);
+        color: rgba(72, 156, 217, 1);
+        padding: 2px 6px;
+        border-radius: 6px;
+        margin-inline-start: 4px;
+        font-size: 0.7rem;
+      }
+    }
+  }
+
+  &.filled .label,
+  select:focus + .label {
+    top: 12px;
+    font-size: 12px;
+    color: var(--primary-color, #265bc1);
+  }
+}
+
+.custom-select option {
+  padding: 8px;
+}
+
+.custom-select option:checked {
+  background-color: #007bff;
+  color: white;
+}
+.error {
+  color: var(--danger-1);
+  margin-top: 5px;
+  font-size: 0.875rem;
+  border-left: 4px solid var(--danger-1);
+  padding-left: 7px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0;
+  margin-top: 5px;
+  margin-inline-start: 5px;
+
+  &::before {
+    // content: "⚠️";
+    font-size: 0.9rem;
+  }
+}
+.required {
+  color: red;
+  font-size: 1rem;
+  margin: 0;
+  margin-top: 5px;
+  margin-inline-start: 5px;
+  margin-inline-end: 5px;
+}

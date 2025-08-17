@@ -1,0 +1,33 @@
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.excellent {
+  background-color: rgba(233, 250, 247, 1);
+  color: rgba(26, 152, 130, 1);
+}
+
+.very_good {
+  color: rgba(43, 178, 254, 1);
+  background-color: rgba(234, 248, 255, 1);
+}
+
+.good {
+  color: rgba(43, 178, 254, 1);
+  background-color: rgba(234, 248, 255, 1);
+}
+
+.passed {
+  color: rgba(248, 102, 36, 1);
+  background-color: rgba(255, 240, 234, 1);
+}
+
+.failed {
+  background-color: rgba(255, 228, 228, 1);
+  color: rgba(214, 22, 22, 1);
+}

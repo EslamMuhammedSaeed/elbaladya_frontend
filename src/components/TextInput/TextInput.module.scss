@@ -1,0 +1,64 @@
+.inputWrapper {
+  position: relative;
+
+  font-family: inherit;
+
+  display: flex;
+  align-items: center;
+  direction: rtl;
+
+  input {
+    background-color: var(--input-bg);
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+
+    font-family: inherit;
+    width: 160px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    color: var(--input-color);
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: var(--input-color);
+    }
+  }
+
+  .text {
+    flex: 1;
+    color: var(--input-color);
+    font-size: 0.8rem;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: white;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    margin-top: 4px;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .option {
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #333;
+    transition: background 0.2s;
+
+    &:hover {
+      background-color: #e9eff9;
+    }
+  }
+}

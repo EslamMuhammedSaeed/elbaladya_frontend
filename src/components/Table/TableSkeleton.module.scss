@@ -1,0 +1,28 @@
+.skeletonTableWrapper {
+  width: 100%;
+  padding: 12px 0;
+}
+
+.skeletonTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+.skeletonTable tr {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+// .skeletonTableCell {
+//   padding: 8px 0px;
+// }
+
+.skeletonTable td {
+  padding: 0 8px;
+  border: none;
+  background: transparent;
+  @media (max-width: 768px) {
+    padding: 8px 8px;
+  }
+}
