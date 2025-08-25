@@ -3,14 +3,14 @@ import { setContext } from "@apollo/client/link/context";
 import createUploadLink from "apollo-upload-client/createUploadLink.mjs";
 
 const uploadLink = createUploadLink({
-  uri: "http://localhost:5001/graphql",
+  uri: import.meta.env.VITE_GRAPHQL_ENDPOINT, // ✅ uses your env
   fetchOptions: {
     mode: "cors",
   },
   headers: {
     "Accept-Language": "en-US,en;q=0.9,ar;q=0.8",
     DNT: "1",
-    // DO NOT manually set "Content-Type", let Apollo handle it for file upload
+    // DO NOT manually set "Content-Type"
   },
 });
 
