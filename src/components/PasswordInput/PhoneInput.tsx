@@ -24,7 +24,7 @@ const PhoneInput: React.FC<InputProps> = ({
     const value = e.target.value;
     const phoneRegex = /^[0-9+]*$/;
 
-    if (value.length <= 11 && phoneRegex.test(value)) {
+    if (value.length <= 15 && phoneRegex.test(value)) {
       onChange(e);
     }
   };

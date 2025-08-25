@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import styles from "./AddUserModal.module.scss";
 import { useTranslation } from "react-i18next";
@@ -121,9 +121,9 @@ const AddStudentForm: React.FC<Props> = ({
   //   })
   // );
 
-  useEffect(() => {
-    console.log("options", adminsOptions, groupsOptions);
-  }, [adminsOptions, groupsOptions]);
+  // useEffect(() => {
+  //   console.log("options", adminsOptions, groupsOptions);
+  // }, [adminsOptions, groupsOptions]);
 
   const validateForm = () => {
     const errors: {
