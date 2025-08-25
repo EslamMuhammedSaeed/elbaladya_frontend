@@ -3,7 +3,7 @@ import loginImage from "@assets/images/login.png";
 import Input from "@components/Input/Input.tsx";
 import Button from "@components/Button/Button.tsx";
 import { useEffect, useState } from "react";
-import { NavLink, useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useDarkMode } from "@context/DarkModeContext";
 import { useMutation } from "@apollo/client";
 import { useAuth } from "@context/AuthContext";
@@ -150,9 +150,9 @@ export default function Login() {
               </div>
             )}
           </div>
-          <NavLink to={""} className={styles.forgotPassword}>
+          {/* <NavLink to={""} className={styles.forgotPassword}>
             نسيت كلمة المرور؟
-          </NavLink>
+          </NavLink> */}
           <Button
             type="button"
             variant="success"
